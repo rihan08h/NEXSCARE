@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuralNexus — AI Health Platform</title>
+  <meta name="description" content="AI-powered health risk detection. Analyze symptoms, track mental health, and get actionable insights.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════ LANDING PAGE ═══════ -->
+  <div id="page-landing" class="page active">
+    <!-- Navbar -->
+    <nav class="landing-nav">
+      <div class="nav-brand">
+        <span class="nav-logo">🧬</span>
+        <span class="nav-name">NeuralNexus</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <span class="nav-badge">⚡ AI Powered</span>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-chip">🛡️ Early Detection Saves Lives</div>
+        <h1 class="hero-title">Detect Health Risks<br><span class="gradient-text">Before They Escalate</span></h1>
+        <p class="hero-subtitle">AI-powered health analysis tools that help you understand symptoms, track mental wellness, and take proactive steps toward better health.</p>
+        <blockquote class="hero-quote">
+          "The future of medicine isn't just about treating illness, it's about predicting it."
+          <br><span>— AI Healthcare Initiative</span>
+        </blockquote>
+      </div>
+
+
+      <!-- Feature Cards -->
+      <div class="feature-cards" id="features">
+        <div class="feature-card card-symptom" onclick="requireAuth('symptom')">
+          <div class="card-glow"></div>
+          <div class="card-icon">🩺</div>
+          <h2 class="card-title">Disease Symptom Analyzer</h2>
+          <p class="card-desc">Enter your symptoms and get AI-powered predictions for possible conditions, risk levels, and recommended next steps.</p>
+          <div class="card-features">
+            <span>✓ 15+ Conditions</span>
+            <span>✓ Risk Scoring</span>
+            <span>✓ Nearby Hospitals</span>
+          </div>
+          <div class="card-action">
+            <span>Launch Analyzer</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <div class="feature-card card-depression" onclick="requireAuth('depression')">
+          <div class="card-glow"></div>
+          <div class="card-icon">🧠</div>
+          <h2 class="card-title">Depression Analyzer &amp; Solver</h2>
+          <p class="card-desc">Take a guided mental health assessment, track your mood over time, and receive AI-driven advice and meditation techniques.</p>
+          <div class="card-features">
+            <span>✓ Depression Test</span>
+            <span>✓ Mood Tracker</span>
+            <span>✓ AI Guidance</span>
+          </div>
+          <div class="card-action">
+            <span>Start Assessment</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="section-header">
+        <h2 class="section-title">How <span class="gradient-text">NeuralNexus</span> Works</h2>
+        <p class="section-subtitle">Three simple steps to understand your health better and take control of your well-being.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📝</div>
+          <h3>Input Your Data</h3>
+          <p>Securely enter your current symptoms, mood changes, or health concerns into our intuitive interface.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🧠</div>
+          <h3>AI Analysis</h3>
+          <p>Our advanced neural networks analyze your data against vast medical databases to identify patterns and potential risks.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">🎯</div>
+          <h3>Actionable Insights</h3>
+          <p>Receive clear, structured guidance, risk assessments, and recommendations for next steps or nearby medical facilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-grid">
+        <div class="about-item">
+          <div class="about-icon">🔒</div>
+          <h3>Private & Secure</h3>
+          <p>Your data stays on your device. No accounts, no cloud storage.</p>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">⚡</div>
+          <h3>Instant Results</h3>
+          <p>Get immediate analysis powered by advanced pattern matching.</p>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">🎯</div>
+          <h3>Actionable Advice</h3>
+          <p>Clear next steps and recommendations for every analysis.</p>
+        </div>
+      </div>
+      <div class="about-disclaimer">
+        ⚕️ <strong>Disclaimer:</strong> NeuralNexus is not a substitute for professional medical advice, diagnosis, or treatment.
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="landing-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <span class="nav-logo">🧬</span>
+            <span class="nav-name">NeuralNexus</span>
+          </div>
+          <p class="footer-desc">Empowering individuals with AI-driven health insights, tracking, and actionable next steps.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <a href="#" onclick="requireAuth('symptom'); return false;">Symptom Analyzer</a>
+          <a href="#" onclick="requireAuth('depression'); return false;">Mental Health Suite</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#features">Features</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal & Privacy</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Data Security</a>
+          <a href="#">Medical Disclaimer</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>📧 support@neuralnexus.ai</p>
+          <p>📞 1-800-NEURAL-HELP</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NeuralNexus. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ═══════ SYMPTOM ANALYZER PAGE ═══════ -->
+  <div id="page-symptom" class="page">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="dash-sidebar-header">
+          <span class="back-btn" onclick="navigateTo('landing')">← Back</span>
+          <div class="dash-brand">
+            <span>🩺</span>
+            <span>Symptom Analyzer</span>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <button class="dash-nav-item active" data-tab="disease-detection" onclick="openTab('symptom', 'disease-detection', this)">
+            <span class="dash-nav-icon">🔍</span> Disease Detection
+          </button>
+          <button class="dash-nav-item" data-tab="nearby-hospitals" onclick="openTab('symptom', 'nearby-hospitals', this)">
+            <span class="dash-nav-icon">🏥</span> Nearby Hospitals
+          </button>
+          <button class="dash-nav-item" data-tab="nearby-pharmacy" onclick="openTab('symptom', 'nearby-pharmacy', this)">
+            <span class="dash-nav-icon">💊</span> Nearby Pharmacy
+          </button>
+          <button class="dash-nav-item" data-tab="health-tips" onclick="openTab('symptom', 'health-tips', this)">
+            <span class="dash-nav-icon">💡</span> Health Tips
+          </button>
+          <button class="dash-nav-item" data-tab="consult-doctor" onclick="openTab('symptom', 'consult-doctor', this)">
+            <span class="dash-nav-icon">👨‍⚕️</span> Consult Doctor
+          </button>
+        </nav>
+        <div class="dash-sidebar-footer">
+          <span class="dash-tag">🔒 Not medical advice</span>
+        </div>
+      </aside>
+      <main class="dash-main">
+        <div class="workspace" id="workspace-symptom">
+          <div class="workspace-empty">
+            <div class="empty-icon">🩺</div>
+            <h3>Select a tool from the sidebar</h3>
+            <p>Click any option to open it as a floating window</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ═══════ DEPRESSION ANALYZER PAGE ═══════ -->
+  <div id="page-depression" class="page">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="dash-sidebar-header">
+          <span class="back-btn" onclick="navigateTo('landing')">← Back</span>
+          <div class="dash-brand">
+            <span>🧠</span>
+            <span>Depression Analyzer</span>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <button class="dash-nav-item active" data-tab="depression-test" onclick="openTab('depression', 'depression-test', this)">
+            <span class="dash-nav-icon">📋</span> Depression Test
+          </button>
+          <button class="dash-nav-item" data-tab="mood-tracker" onclick="openTab('depression', 'mood-tracker', this)">
+            <span class="dash-nav-icon">📊</span> Mood Tracker
+          </button>
+          <button class="dash-nav-item" data-tab="music-therapy" onclick="openTab('depression', 'music-therapy', this)">
+            <span class="dash-nav-icon">🎵</span> Mood Music
+          </button>
+          <button class="dash-nav-item" data-tab="ai-advice" onclick="openTab('depression', 'ai-advice', this)">
+            <span class="dash-nav-icon">🤖</span> AI Advice
+          </button>
+          <button class="dash-nav-item" data-tab="meditation-guidance" onclick="openTab('depression', 'meditation-guidance', this)">
+            <span class="dash-nav-icon">🧘</span> Meditation Guidance
+          </button>
+          <button class="dash-nav-item" data-tab="daily-diary" onclick="openTab('depression', 'daily-diary', this)">
+            <span class="dash-nav-icon">📓</span> Daily Diary
+          </button>
+        </nav>
+        <div class="dash-sidebar-footer">
+          <span class="dash-tag">💚 You matter</span>
+        </div>
+      </aside>
+      <main class="dash-main">
+        <div class="workspace" id="workspace-depression">
+          <div class="workspace-empty">
+            <div class="empty-icon">🧠</div>
+            <h3>Select a tool from the sidebar</h3>
+            <p>Click any option to open it as a floating window</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- AI CHATBOT PANEL (Right Side) -->
+      <aside class="chatbot-panel" id="chatbot-panel">
+        <div class="chatbot-header">
+          <div class="chatbot-brand">
+            <span class="chatbot-avatar">&#129504;</span>
+            <div>
+              <div class="chatbot-name">NeuralNexus AI</div>
+              <div class="chatbot-status"><span class="chatbot-dot"></span> Online</div>
+            </div>
+          </div>
+          <button class="chatbot-clear-btn" onclick="clearChatHistory()" title="Clear chat">&#128465;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input-bar">
+          <textarea id="chatbot-input" class="chatbot-input" placeholder="Share how you're feeling..." rows="1" onkeydown="handleChatKey(event)" oninput="autoResizeChatInput(this)"></textarea>
+          <button class="chatbot-send-btn" id="chatbot-send-btn" onclick="sendChatMessage()" title="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Emergency Modal -->
+  <div id="emergency-modal" class="emergency-modal hidden">
+    <div class="em-overlay" onclick="closeEmergency()"></div>
+    <div class="em-box">
+      <div class="em-icon">🚨</div>
+      <h2>EMERGENCY ALERT</h2>
+      <p class="em-subtitle">Your symptoms may indicate a <strong>life-threatening emergency</strong></p>
+      <div class="em-condition" id="em-condition-text"></div>
+      <div class="em-actions">
+        <a href="tel:112" class="btn-emergency">📞 Call 112 Now</a>
+        <a href="tel:108" class="btn-emergency secondary">🚑 Call 108 (Ambulance)</a>
+      </div>
+      <button class="em-close" onclick="closeEmergency()">I understand — Continue</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
